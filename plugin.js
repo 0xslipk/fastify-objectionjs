@@ -14,7 +14,7 @@ const defaultKnexConfig = {
 const supportedClients = ['pg', 'sqlite3', 'mysql', 'mysql2', 'oracle', 'mssql']
 
 function fastifyObjectionjs (fastify, options, next) {
-  const knexConfig = Object.assign(defaultKnexConfig, options.knexConfig)
+  const knexConfig = Object.assign({}, defaultKnexConfig, options.knexConfig)
 
   if (supportedClients.indexOf(knexConfig.client) === -1) {
     next(new Error(`unsupported client, 'fastify-objectionjs' only support ${supportedClients.join(', ')}.`))
