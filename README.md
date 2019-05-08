@@ -24,7 +24,7 @@ npm i fastify-objectionjs --save
 ```
 
 ## Usage
-Define the objectionjs models
+Define the objectionjs model
 
 ```js
 // user.model.js
@@ -57,7 +57,7 @@ class User extends Model {
 module.exports = User
 ```
 
-Add it to your project with `register` and you are done!
+Add the knex config and objectionjs model to the project with `register`
 
 ```js
 const fastify = require('fastify')()
