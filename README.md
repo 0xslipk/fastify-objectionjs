@@ -24,15 +24,7 @@ npm i fastify-objectionjs --save
 ```
 
 ## Usage
-<<<<<<< HEAD
-<<<<<<< HEAD
 Define the objectionjs model
-=======
-Define the objectionjs models
->>>>>>> f0d42ae... Update README.md
-=======
-Define the objectionjs model
->>>>>>> 424cc4e... typo
 
 ```js
 // user.model.js
@@ -65,15 +57,7 @@ class User extends Model {
 module.exports = User
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Add the knex config and objectionjs model to the project with `register`
-=======
-Add it to your project with `register` and you are done!
->>>>>>> f0d42ae... Update README.md
-=======
-Add the knex config and objectionjs model to the project with `register`
->>>>>>> 424cc4e... typo
 
 ```js
 const fastify = require('fastify')()
@@ -162,8 +146,4 @@ fastify.listen(3000, err => {
 
 ## License
 
-<<<<<<< HEAD
 [MIT License](http://jsumners.mit-license.org/)
-=======
-[MIT License](http://jsumners.mit-license.org/)
->>>>>>> f0d42ae... Update README.md
