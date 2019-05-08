@@ -5,7 +5,7 @@
   "main": "plugin.js",
   "scripts": {
     "test": "tap test/*.test.js",
-    "test-ci": "tap --cov test/*.test.js",
+    "test-ci": "tap --cov test/*.test.js --coverage-report=html",
     "lint": "standard --verbose | snazzy",
     "lint-ci": "standard"
   },
