@@ -1,6 +1,6 @@
 {
   "name": "fastify-objectionjs",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "fastify-objectionjs is a plugin for the Fastify framework that provides integration with objectionjs ORM",
   "main": "plugin.js",
   "scripts": {
