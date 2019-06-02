@@ -39,7 +39,7 @@ function fastifyObjectionjs (fastify, options, next) {
   for (let i = 0; i < options.models.length; i += 1) {
     const model = options.models[i]
 
-    if (model.prototype instanceof Model) {
+    if (model.idColumn && model.tableName && model.jsonSchema && model.query) {
       objection.models[model.name.replace(/^\w/, c => c.toLowerCase())] = model
     }
   }

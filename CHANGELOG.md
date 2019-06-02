@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+Published by **[jarcodallo](https://github.com/jarcodallo)** on **2019/06/01**
+- [#13](https://github.com/jarcodallo/fastify-objectionjs/pull/13) Fix objection Model validation
+
 ## 0.1.2
 Published by **[jarcodallo](https://github.com/jarcodallo)** on **2019/05/09**
 - [#5](https://github.com/jarcodallo/fastify-objectionjs/pull/5) Fix README.md
