@@ -6,6 +6,7 @@ const { Model } = require('objection')
 
 const defaultKnexConfig = {
   client: 'sqlite3',
+  useNullAsDefault: true,
   connection: {
     filename: './default.sqlite'
   }
