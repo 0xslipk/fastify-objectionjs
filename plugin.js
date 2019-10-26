@@ -57,6 +57,11 @@ function fastifyObjectionjs (fastify, options, next) {
     return
   }
 
+  fastify.addHook('onClose', (fastify, done) => {
+    knexConnection.destroy()
+    done()
+  })
+
   next()
 }
 
