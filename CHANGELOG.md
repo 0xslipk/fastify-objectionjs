@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.5
+Published by **[jarcodallo](https://github.com/jarcodallo)** on **2020/01/12**
+- [#27](https://github.com/jarcodallo/fastify-objectionjs/pull/27) Fix dependencies
+- [#23](https://github.com/jarcodallo/fastify-objectionjs/pull/23) Destroy knex connection on fastify onClose hook
+
 ## 0.1.4
 Published by **[jarcodallo](https://github.com/jarcodallo)** on **2019/06/02**
 - [#14](https://github.com/jarcodallo/fastify-objectionjs/pull/14) Remove git reopo from dist
