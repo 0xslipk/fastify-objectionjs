@@ -87,6 +87,20 @@ test('double register of the same plugin', t => {
     })
 })
 
+test('should destroy knex instance on onClose hook', t => {
+  const fastify = Fastify()
+
+  fastify
+    .register(fastifyObjectionjs, { knexConfig: { client: 'sqlite3' }, models: [TestModel] })
+    .ready(err => {
+      t.error(err)
+      fastify.close().then(() => {
+        t.ok(fastify.objection.knex.client.pool.destroyed)
+        t.end()
+      })
+    })
+})
+
 function register (t, options, callback) {
   const fastify = Fastify()
   t.teardown(() => fastify.close())
