@@ -29,16 +29,16 @@
   },
   "homepage": "https://github.com/jarcodallo/fastify-objectionjs#readme",
   "devDependencies": {
-    "fastify": "^2.4.1",
+    "fastify": "^2.11.0",
     "pre-commit": "^1.2.2",
     "snazzy": "^8.0.0",
-    "sqlite3": "4.0.8",
-    "standard": "^12.0.1",
-    "tap": "^14.2.0"
+    "sqlite3": "^4.1.1",
+    "standard": "^14.3.1",
+    "tap": "^14.10.5"
   },
   "dependencies": {
     "fastify-plugin": "^1.6.0",
-    "knex": "0.17.2",
-    "objection": "1.6.9"
+    "knex": "^0.20.7",
+    "objection": "^1.6.9"
   }
 }
