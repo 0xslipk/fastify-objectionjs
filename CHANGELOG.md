@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0
+Published by **[jarcodallo](https://github.com/jarcodallo)** on **2020/01/13**
+- [#28](https://github.com/jarcodallo/fastify-objectionjs/pull/28) Update objection.js to v2
+
 ## 0.1.5
 Published by **[jarcodallo](https://github.com/jarcodallo)** on **2020/01/12**
 - [#27](https://github.com/jarcodallo/fastify-objectionjs/pull/27) Fix dependencies
