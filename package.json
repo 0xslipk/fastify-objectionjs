@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "fastify-plugin": "^1.6.0",
-    "knex": "^0.20.7",
+    "knex": "^0.21.0",
     "objection": "^2.1.2"
   }
 }
