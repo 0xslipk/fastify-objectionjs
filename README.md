@@ -57,7 +57,7 @@ class User extends Model {
 module.exports = User
 ```
 
-Add the knex config and objectionjs model to the project with `register`
+Add the knex config and objectionjs models to the project with `register`
 
 ```js
 const fastify = require('fastify')()
@@ -123,6 +123,69 @@ fastify.listen(3000, err => {
 })
 ```
 
+You can also use the plugin only to do the setup and call the model files directly.
+
+```js
+const fastify = require('fastify')()
+const User = require('./user.model.js')
+
+fastify.register(require('fastify-objectionjs'), {
+  knexConfig: {
+    client: 'sqlite3',
+    connection: {
+      filename: './default.sqlite'
+    }
+  }
+})
+
+const schemas = {
+  response: {
+    200: {
+      type: 'object',
+      properties: {
+        id: { type: 'integer' },
+        token: { type: 'string' }
+      }
+    },
+    401: {
+      type: 'object',
+      properties: {
+        message: { type: 'string' }
+      }
+    }
+  },
+  body: {
+    type: 'object',
+    properties: {
+      username: { type: 'string', minLength: 1, maxLength: 255 },
+      password: { type: 'string', minLength: 1, maxLength: 255 }
+    },
+    required: ['username', 'password']
+  }
+}
+
+fastify.post('/login', { schema }, async function (request, reply) {
+  const { username, password } = request.body
+
+  const user = await User.query().findOne({ username })
+
+  if (user && fastify.password.validate(user.password, user.salt, password)) {
+    const token = fastify.jwt.sign(
+      { sub: user.username },
+      { expiresIn: '6h' }
+    )
+
+    reply.send({ id: user.id, token })
+  } else {
+    reply.status(401).send({ message: 'Invalid username or password' })
+  }
+})
+
+fastify.listen(3000, err => {
+  if (err) throw err
+})
+```
+
 ## API
 
 ### Options
@@ -137,12 +200,18 @@ fastify.listen(3000, err => {
       filename: './default.sqlite'
     }
   },
-  models: [User]
+  models: [User],
+  upperCase: false,
+  underscoreBeforeDigits: false,
+  underscoreBetweenUppercaseLetters: false
 }
 ```
 
 + `knexConfig` (Default: `sqlite3 connection`): can be set any knex valid configuration.
 + `models` (Default: `undefined`): a collection of objectionjs models.
++ `upperCase` (Default: `false`): Set to `true` if your columns are UPPER_SNAKE_CASED.
++ `underscoreBeforeDigits` (Default: `false`): When `true`, will place an underscore before digits (`foo1Bar2` becomes `foo_1_bar_2`). When `false`, `foo1Bar2` becomes `foo1_bar2`.
++ `underscoreBetweenUppercaseLetters` (Default: `false`): When `true`, will place underscores between consecutive uppercase letters (`fooBAR` becomes `foo_b_a_r`). When `false`, `fooBAR` will become `foo_bar`.
 
 ## License
 
