@@ -2,7 +2,7 @@
 
 ## 0.2.1
 Published by **[jarcodallo](https://github.com/jarcodallo)** on **2020/04/19**
-- [#28](https://github.com/jarcodallo/fastify-objectionjs/pull/28) Add support for [knexSnakeCaseMappers](https://vincit.github.io/objection.js/api/objection/#snakecasemappers)
+- [#34](https://github.com/jarcodallo/fastify-objectionjs/pull/28) Add support for [knexSnakeCaseMappers](https://vincit.github.io/objection.js/api/objection/#snakecasemappers)
 
 ## 0.2.0
 Published by **[jarcodallo](https://github.com/jarcodallo)** on **2020/01/13**
