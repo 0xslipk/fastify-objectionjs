@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+Published by **[jarcodallo](https://github.com/jarcodallo)** on **2020/06/23**
+- [#28](https://github.com/jarcodallo/fastify-objectionjs/pull/36) fix setup w/o models
+
 ## 0.2.1
 Published by **[jarcodallo](https://github.com/jarcodallo)** on **2020/04/19**
 - [#34](https://github.com/jarcodallo/fastify-objectionjs/pull/28) Add support for [knexSnakeCaseMappers](https://vincit.github.io/objection.js/api/objection/#snakecasemappers)
