@@ -39,24 +39,26 @@ function fastifyObjectionjs (fastify, options, next) {
 
   Model.knex(knexConnection)
 
-  if (!options.models || !Array.isArray(options.models) || options.models.length < 1) {
-    next(new Error('You need to provide a valid array of `objection.js` models.'))
-    return
-  }
-
-  objection.models = {}
-
-  for (let i = 0; i < options.models.length; i += 1) {
-    const model = options.models[i]
-
-    if (model.idColumn && model.tableName && model.jsonSchema && model.query) {
-      objection.models[model.name.replace(/^\w/, c => c.toLowerCase())] = model
+  if (options.models) {
+    if (!Array.isArray(options.models) || options.models.length < 1) {
+      next(new Error('You need to provide a valid array of `objection.js` models.'))
+      return
     }
-  }
 
-  if (Object.keys(objection.models).length < 1) {
-    next(new Error('The supplied models are invalid.'))
-    return
+    objection.models = {}
+
+    for (let i = 0; i < options.models.length; i += 1) {
+      const model = options.models[i]
+
+      if (model.idColumn && model.tableName && model.jsonSchema && model.query) {
+        objection.models[model.name.replace(/^\w/, c => c.toLowerCase())] = model
+      }
+    }
+
+    if (Object.keys(objection.models).length < 1) {
+      next(new Error('The supplied models are invalid.'))
+      return
+    }
   }
 
   if (!fastify.objection) {
