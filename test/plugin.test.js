@@ -14,14 +14,6 @@ test('unsupported client', t => {
   })
 })
 
-test('invalid models option', t => {
-  register(t, {}, function (err, fastify) {
-    t.throws(function () { throw err })
-    t.notOk(fastify.objection)
-    t.end()
-  })
-})
-
 test('models option is not Array', t => {
   register(t, { models: {} }, function (err, fastify) {
     t.throws(function () { throw err })
@@ -99,6 +91,16 @@ test('should destroy knex instance on onClose hook', t => {
         t.end()
       })
     })
+})
+
+test('should only do the setup of knex without models', t => {
+  register(t, { knexConfig: { client: 'sqlite3' } }, function (err, fastify) {
+    t.error(err)
+    t.ok(fastify.objection)
+    t.ok(fastify.objection.knex)
+    t.notOk(fastify.objection.models)
+    t.end()
+  })
 })
 
 function register (t, options, callback) {
