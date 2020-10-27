@@ -17,6 +17,10 @@ const defaultKnexConfig = {
 }
 ```
 
+### Requirements
+
+Node.js v10 LTS or later.
+
 ## Install
 
 ```
@@ -73,7 +77,7 @@ fastify.register(require('fastify-objectionjs'), {
   models: [User]
 })
 
-const schemas = {
+const schema = {
   response: {
     200: {
       type: 'object',
@@ -138,7 +142,7 @@ fastify.register(require('fastify-objectionjs'), {
   }
 })
 
-const schemas = {
+const schema = {
   response: {
     200: {
       type: 'object',
