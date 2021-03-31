@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.3.1
+Updated dependencies
+
 ## 0.3.0
 - [#28](https://github.com/jarcodallo/fastify-objectionjs/pull/43) Updated dependencies (fastify-plugin to 2.x) and support Node.js v10 LTS or later.
 
