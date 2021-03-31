@@ -1,6 +1,11 @@
 # Changelog
 
+## 0.3.1
+Published by **[jarcodallo](https://github.com/jarcodallo)** on **2021/03/31**
+- [#47](https://github.com/jarcodallo/fastify-objectionjs/pull/47) Updated dependencies
+
 ## 0.3.0
+Published by **[jarcodallo](https://github.com/jarcodallo)** on **2020/10/27**
 - [#28](https://github.com/jarcodallo/fastify-objectionjs/pull/43) Updated dependencies (fastify-plugin to 2.x) and support Node.js v10 LTS or later.
 
 ## 0.2.2
