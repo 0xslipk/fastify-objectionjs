@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.0
+Published by **[jarcodallo](https://github.com/jarcodallo)** on **2021/05/11**
+- [#51](https://github.com/jarcodallo/fastify-objectionjs/pull/51) Add types
+- [#50](https://github.com/jarcodallo/fastify-objectionjs/pull/50) Update fastify to v3
+
 ## 0.3.1
 Published by **[jarcodallo](https://github.com/jarcodallo)** on **2021/03/31**
 - [#47](https://github.com/jarcodallo/fastify-objectionjs/pull/47) Updated dependencies
