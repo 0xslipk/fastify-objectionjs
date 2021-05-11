@@ -3,6 +3,7 @@
   "version": "0.3.2",
   "description": "fastify-objectionjs is a plugin for the Fastify framework that provides integration with objectionjs ORM",
   "main": "plugin.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "tap test/*.test.js",
     "test-ci": "tap --cov test/*.test.js --coverage-report=html",
