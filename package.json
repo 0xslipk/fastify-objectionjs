@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "fastify-plugin": "^3.0.0",
-    "knex": "^0.95.4",
-    "objection": "^2.2.15"
+    "knex": "^0.95.14",
+    "objection": "^3.0.0"
   }
 }
