@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.0
+Published by **[jarcodallo](https://github.com/jarcodallo)** on **2021/05/11**
+- [#56](https://github.com/jarcodallo/fastify-objectionjs/pull/56) Use objectionjs v3
+
+## BREAKING CHANGE
+- Dropped support for node < 12
+- Upgrade objection from 2.x to 3.0 [see](https://vincit.github.io/objection.js/release-notes/migration.html#migration-from-objection-2-x-to-3-0)
+
 ## 0.4.0
 Published by **[jarcodallo](https://github.com/jarcodallo)** on **2021/05/11**
 - [#51](https://github.com/jarcodallo/fastify-objectionjs/pull/51) Add types
