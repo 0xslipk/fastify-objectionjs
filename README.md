@@ -1,10 +1,13 @@
 # fastify-objectionjs
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/jarcodallo/fastify-objectionjs.svg)](https://greenkeeper.io/) [![Build Status](https://travis-ci.org/jarcodallo/fastify-objectionjs.svg?branch=master)](https://travis-ci.org/jarcodallo/fastify-objectionjs)
+[![npm](https://img.shields.io/npm/v/fastify-objectionjs)](https://www.npmjs.com/package/fastify-objectionjs)
+[![CircleCI](https://circleci.com/gh/jarcodallo/fastify-objectionjs/tree/main.svg?style=svg)](https://circleci.com/gh/jarcodallo/fastify-objectionjs/tree/main)
+[![Coverage Status](https://coveralls.io/repos/github/jarcodallo/fastify-objectionjs/badge.svg?branch=main)](https://coveralls.io/github/jarcodallo/fastify-objectionjs?branch=main)
+[![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/fastify-objectionjs)](https://snyk.io/test/github/jarcodallo/fastify-objectionjs)
 
 *fastify-objectionjs* is a plugin for the [Fastify](http://fastify.io/) framework that provides integration with [objectionjs ORM](https://vincit.github.io/objection.js/).
 
-Supports Fastify versions ^2.0.0.
+Supports Fastify versions ^3.0.0.
 
 If you don't provide the `knexConfig.client` by yourself (see below), the plugin use the default configuration:
 
@@ -19,7 +22,7 @@ const defaultKnexConfig = {
 
 ### Requirements
 
-Node.js v10 LTS or later.
+Node.js v12 LTS or later.
 
 ## Install
 
