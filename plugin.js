@@ -12,7 +12,7 @@ const defaultKnexConfig = {
   }
 }
 
-const supportedClients = ['pg', 'sqlite3', 'mysql', 'mysql2', 'oracle', 'mssql']
+const supportedClients = ['pg', 'sqlite3', 'better-sqlite3', 'mysql', 'mysql2', 'oracle', 'mssql']
 
 function fastifyObjectionjs (fastify, options, next) {
   const knexConfig = Object.assign(
