@@ -2,6 +2,7 @@
 
 ## 2.0.0
 Published by **[0xslipk](https://github.com/0xslipk)** on **2022/11/30**
+- [#60](https://github.com/0xslipk/fastify-objectionjs/pull/60) Remove node v12 and update deps
 
 ## BREAKING CHANGE
 - The default client now is better-sqlite3 instead of sqlite3 
