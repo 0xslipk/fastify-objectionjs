@@ -77,6 +77,6 @@ function fastifyObjectionjs (fastify, options, next) {
 }
 
 module.exports = fp(fastifyObjectionjs, {
-  fastify: '>=2.0.0',
+  fastify: '>=4.0.0',
   name: 'fastify-objectionjs'
 })
