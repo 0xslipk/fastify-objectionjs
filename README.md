@@ -1,19 +1,22 @@
-# fastify-objectionjs
+Fastify Objectionjs Plugin
+==========================
 
-[![npm](https://img.shields.io/npm/v/fastify-objectionjs)](https://www.npmjs.com/package/fastify-objectionjs)
-[![CircleCI](https://circleci.com/gh/jarcodallo/fastify-objectionjs/tree/main.svg?style=svg)](https://circleci.com/gh/jarcodallo/fastify-objectionjs/tree/main)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/0xslipk/fastify-objectionjs/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/0xslipk/fastify-objectionjs/tree/main)
 [![Coverage Status](https://coveralls.io/repos/github/jarcodallo/fastify-objectionjs/badge.svg?branch=main)](https://coveralls.io/github/jarcodallo/fastify-objectionjs?branch=main)
+[![npm](https://img.shields.io/npm/v/fastify-objectionjs?label=version&logo=npm)](https://www.npmjs.com/package/fastify-objectionjs)
+[![npm](https://img.shields.io/npm/dw/fastify-objectionjs?logo=npm)](https://www.npmjs.com/package/fastify-objectionjs?activeTab=versions)
 [![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/fastify-objectionjs)](https://snyk.io/test/github/jarcodallo/fastify-objectionjs)
+[![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 *fastify-objectionjs* is a plugin for the [Fastify](http://fastify.io/) framework that provides integration with [objectionjs ORM](https://vincit.github.io/objection.js/).
 
-Supports Fastify versions ^3.0.0.
+Supports Fastify versions ^4.0.0.
 
 If you don't provide the `knexConfig.client` by yourself (see below), the plugin use the default configuration:
 
 ```js
 const defaultKnexConfig = {
-  client: 'sqlite3',
+  client: 'better-sqlite3',
   connection: {
     filename: './default.sqlite'
   }
@@ -22,7 +25,7 @@ const defaultKnexConfig = {
 
 ### Requirements
 
-Node.js v12 LTS or later.
+Node.js v14 LTS or later.
 
 ## Install
 
@@ -72,7 +75,7 @@ const User = require('./user.model.js')
 
 fastify.register(require('fastify-objectionjs'), {
   knexConfig: {
-    client: 'sqlite3',
+    client: 'better-sqlite3',
     connection: {
       filename: './default.sqlite'
     }
@@ -138,7 +141,7 @@ const User = require('./user.model.js')
 
 fastify.register(require('fastify-objectionjs'), {
   knexConfig: {
-    client: 'sqlite3',
+    client: 'better-sqlite3',
     connection: {
       filename: './default.sqlite'
     }
@@ -202,7 +205,7 @@ fastify.listen(3000, err => {
 ```js
 {
   knexConfig: {
-    client: 'sqlite3',
+    client: 'better-sqlite3',
     connection: {
       filename: './default.sqlite'
     }
@@ -214,12 +217,24 @@ fastify.listen(3000, err => {
 }
 ```
 
-+ `knexConfig` (Default: `sqlite3 connection`): can be set any knex valid configuration.
++ `knexConfig` (Default: `better-sqlite3 connection`): can be set any knex valid configuration.
 + `models` (Default: `undefined`): a collection of objectionjs models.
 + `upperCase` (Default: `false`): Set to `true` if your columns are UPPER_SNAKE_CASED.
 + `underscoreBeforeDigits` (Default: `false`): When `true`, will place an underscore before digits (`foo1Bar2` becomes `foo_1_bar_2`). When `false`, `foo1Bar2` becomes `foo1_bar2`.
 + `underscoreBetweenUppercaseLetters` (Default: `false`): When `true`, will place underscores between consecutive uppercase letters (`fooBAR` becomes `foo_b_a_r`). When `false`, `fooBAR` will become `foo_bar`.
 
+## Change Log
+
+See [Changelog](CHANGELOG.md) for more information.
+
+## Contributing
+
+Contributions welcome! See [Contributing](CONTRIBUTING.md).
+
+## Collaborators
+
+* [__Jose Ramirez__](https://github.com/0xslipk)
+
 ## License
 
-[MIT License](http://jsumners.mit-license.org/)
+Licensed under the MIT - see the [LICENSE](LICENSE) file for details.
