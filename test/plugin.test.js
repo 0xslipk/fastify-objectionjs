@@ -41,7 +41,7 @@ test('supplied models option are invalid ', t => {
 })
 
 test('load a valid model', t => {
-  register(t, { knexConfig: { client: 'sqlite3' }, models: [TestModel] }, function (err, fastify) {
+  register(t, { knexConfig: { client: 'better-sqlite3' }, models: [TestModel] }, function (err, fastify) {
     t.error(err)
     t.ok(fastify.objection)
     t.ok(fastify.objection.knex)
@@ -54,7 +54,7 @@ test('load a valid model', t => {
 test('only load a valid models', t => {
   class GenricClass { }
 
-  register(t, { knexConfig: { client: 'sqlite3' }, models: [TestModel, GenricClass] }, function (err, fastify) {
+  register(t, { knexConfig: { client: 'better-sqlite3' }, models: [TestModel, GenricClass] }, function (err, fastify) {
     t.error(err)
     t.ok(fastify.objection)
     t.ok(fastify.objection.knex)
@@ -70,8 +70,8 @@ test('double register of the same plugin', t => {
   t.teardown(() => fastify.close())
 
   fastify
-    .register(fastifyObjectionjs, { knexConfig: { client: 'sqlite3' }, models: [TestModel] })
-    .register(fastifyObjectionjs, { knexConfig: { client: 'sqlite3' }, models: [TestModel] })
+    .register(fastifyObjectionjs, { knexConfig: { client: 'better-sqlite3' }, models: [TestModel] })
+    .register(fastifyObjectionjs, { knexConfig: { client: 'better-sqlite3' }, models: [TestModel] })
     .ready(err => {
       t.ok(err)
       t.equal(err.message, 'fastify-objectionjs has already registered.')
@@ -83,7 +83,7 @@ test('should destroy knex instance on onClose hook', t => {
   const fastify = Fastify()
 
   fastify
-    .register(fastifyObjectionjs, { knexConfig: { client: 'sqlite3' }, models: [TestModel] })
+    .register(fastifyObjectionjs, { knexConfig: { client: 'better-sqlite3' }, models: [TestModel] })
     .ready(err => {
       t.error(err)
       fastify.close().then(() => {
@@ -94,7 +94,7 @@ test('should destroy knex instance on onClose hook', t => {
 })
 
 test('should only do the setup of knex without models', t => {
-  register(t, { knexConfig: { client: 'sqlite3' } }, function (err, fastify) {
+  register(t, { knexConfig: { client: 'better-sqlite3' } }, function (err, fastify) {
     t.error(err)
     t.ok(fastify.objection)
     t.ok(fastify.objection.knex)

@@ -60,5 +60,5 @@ typings/
 # next.js build output
 .next
 
-# default knex config for sqlite3
+# default knex config for better-sqlite3
 default.sqlite

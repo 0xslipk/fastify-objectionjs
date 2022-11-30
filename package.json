@@ -6,7 +6,7 @@
   "types": "index.d.ts",
   "engineStrict": false,
   "engines": {
-    "node": "^12.x || >=14.x || >=16.x"
+    "node": "^14.x || >=16.x || >=18.x"
   },
   "scripts": {
     "test": "tap test/*.test.js",
@@ -35,16 +35,19 @@
   },
   "homepage": "https://github.com/jarcodallo/fastify-objectionjs#readme",
   "devDependencies": {
-    "fastify": "^3.25.1",
+    "fastify": "^4.10.2",
     "pre-commit": "^1.2.2",
     "snazzy": "^9.0.0",
-    "sqlite3": "^4.2.0",
-    "standard": "^16.0.4",
-    "tap": "^15.1.5"
+    "better-sqlite3": "^8.0.0",
+    "standard": "^17.0.0",
+    "tap": "^16.3.2"
   },
   "dependencies": {
-    "fastify-plugin": "^3.0.0",
-    "knex": "^0.95.14",
-    "objection": "^3.0.0"
+    "fastify-plugin": "^4.3.0",
+    "knex": "^2.3.0",
+    "objection": "^3.0.1"
+  },
+  "peerDependencies": {
+    "better-sqlite3": "^8.0.0"
   }
 }

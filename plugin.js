@@ -5,14 +5,14 @@ const Knex = require('knex')
 const { Model, knexSnakeCaseMappers } = require('objection')
 
 const defaultKnexConfig = {
-  client: 'sqlite3',
+  client: 'better-sqlite3',
   useNullAsDefault: true,
   connection: {
     filename: './default.sqlite'
   }
 }
 
-const supportedClients = ['pg', 'sqlite3', 'mysql', 'mysql2', 'oracle', 'mssql']
+const supportedClients = ['pg', 'sqlite3', 'better-sqlite3', 'mysql', 'mysql2', 'oracle', 'mssql']
 
 function fastifyObjectionjs (fastify, options, next) {
   const knexConfig = Object.assign(
