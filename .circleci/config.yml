@@ -15,7 +15,7 @@ jobs:
       node-version:
         type: string
     docker:
-      - image: circleci/node:<< parameters.node-version >>
+      - image: cimg/node:<< parameters.node-version >>
     resource_class: small
     steps:
       - checkout
@@ -47,4 +47,4 @@ workflows:
       - test:
           matrix:
             parameters:
-              node-version: ['lts', '16.13', '14.18']
+              node-version: ['18.12', '16.18', '14.21']
