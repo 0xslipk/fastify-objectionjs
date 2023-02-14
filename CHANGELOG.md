@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1
+Published by **[0xslipk](https://github.com/0xslipk)** on **2023/02/14**
+- [#63](https://github.com/0xslipk/fastify-objectionjs/pull/63) Use supported clients from knex lib
+
 ## 2.0.0
 Published by **[0xslipk](https://github.com/0xslipk)** on **2022/11/30**
 - [#60](https://github.com/0xslipk/fastify-objectionjs/pull/60) Remove node v12 and update deps

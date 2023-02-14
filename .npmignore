@@ -7,3 +7,4 @@ coverage/
 .nvmrc
 .editorconfig
 .circleci/
+.github/

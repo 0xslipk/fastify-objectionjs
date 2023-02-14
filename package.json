@@ -1,6 +1,6 @@
 {
   "name": "fastify-objectionjs",
-  "version": "2.0.0",
+  "version": "2.0.1-beta.1",
   "description": "fastify-objectionjs is a plugin for the Fastify framework that provides integration with objectionjs ORM",
   "main": "plugin.js",
   "types": "index.d.ts",
@@ -35,16 +35,16 @@
   },
   "homepage": "https://github.com/jarcodallo/fastify-objectionjs#readme",
   "devDependencies": {
-    "fastify": "^4.10.2",
+    "fastify": "^4.13.0",
     "pre-commit": "^1.2.2",
     "snazzy": "^9.0.0",
-    "better-sqlite3": "^8.0.0",
+    "better-sqlite3": "^8.1.0",
     "standard": "^17.0.0",
-    "tap": "^16.3.2"
+    "tap": "^16.3.4"
   },
   "dependencies": {
-    "fastify-plugin": "^4.3.0",
-    "knex": "^2.3.0",
+    "fastify-plugin": "^4.5.0",
+    "knex": "^2.4.2",
     "objection": "^3.0.1"
   },
   "peerDependencies": {
