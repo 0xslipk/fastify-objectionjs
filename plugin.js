@@ -2,6 +2,7 @@
 
 const fp = require('fastify-plugin')
 const Knex = require('knex')
+const { SUPPORTED_CLIENTS } = require('knex/lib/constants')
 const { Model, knexSnakeCaseMappers } = require('objection')
 
 const defaultKnexConfig = {
@@ -11,8 +12,6 @@ const defaultKnexConfig = {
     filename: './default.sqlite'
   }
 }
-
-const supportedClients = ['pg', 'sqlite3', 'better-sqlite3', 'mysql', 'mysql2', 'oracle', 'mssql']
 
 function fastifyObjectionjs (fastify, options, next) {
   const knexConfig = Object.assign(
@@ -26,8 +25,8 @@ function fastifyObjectionjs (fastify, options, next) {
     })
   )
 
-  if (supportedClients.indexOf(knexConfig.client) === -1) {
-    next(new Error(`unsupported client, 'fastify-objectionjs' only support ${supportedClients.join(', ')}.`))
+  if (SUPPORTED_CLIENTS.indexOf(knexConfig.client) === -1) {
+    next(new Error(`unsupported client, 'fastify-objectionjs' only support ${SUPPORTED_CLIENTS.join(', ')}.`))
     return
   }
 
